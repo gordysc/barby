@@ -68,7 +68,7 @@ module Barby
           row = ""
           enc << row
         end
-        row << sprintf("%08b", (byte & 0xff) | 0x100)
+        row << sprintf("%08b", (byte & 0xff) | 0x100)[1.., -1]
       end
       enc
     end
